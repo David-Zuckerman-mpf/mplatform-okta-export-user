@@ -1,0 +1,18 @@
+logging:
+  file: export_user.log
+  level:
+    ROOT: INFO
+okta:
+  orgUrl: https://dev-636690.oktapreview.com
+  token: 00_rBINiN5Mgl83bFaEPMWO8H5-phXj1CcsTtFxOhK
+  appIds:
+      minsights: 0oah3paz68W1hZKMX0h7
+      xanadu: 0oah3o4zx05MNrkqT0h7
+      usermgmt: 0oahg6xpttbPUJEJI0h7
+
+server:
+  port: 8093
+
+
+liquibase:
+  enabled: true

@@ -1,0 +1,7 @@
+databaseChangeLog:
+- include:
+    file:
+      db/changelog/changes/create-schema.sql
+- include:
+    file:
+      db/changelog/changes/insert-initial-status-record.sql

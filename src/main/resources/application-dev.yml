@@ -1,0 +1,24 @@
+okta:
+  orgUrl: https://dev-256811.oktapreview.com
+  token: 00ly56De23xwylgb1TlX_lj8blz9mnCGwnjuR-9NqK
+
+  appIds:
+      minsights: 0oah3paz68W1hZKMX0h7
+      xanadu: 0oah3o4zx05MNrkqT0h7
+
+mariaDB:
+  url: jdbc:mariadb://10.90.106.40:3306
+  dataStoreDB: data_store
+  agencygeoDB: agency_geo
+  user: admin
+  password: admin
+
+spring:
+  liquibase:
+    url: jdbc:mariadb://10.90.106.229/data_store?createDatabaseIfNotExist=true
+    user: admin
+    password: admin
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+app:
+    chron: "*/10 * * * * *"

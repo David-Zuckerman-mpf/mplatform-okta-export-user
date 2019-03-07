@@ -1,0 +1,26 @@
+okta:
+  orgUrl: https://xaxis.okta.com
+  token: 00csfdToS-_r1mbMZB1pad895ILnRZ3iILuK0YpA9x
+
+  appIds:
+      minsights: 0oal8e6rxo9Ofdzir0x7
+          xanadu: 0oal8ech9q0YSVOSG0x7
+
+mariaDB:
+  url: jdbc:mariadb://tbmariadbg01sh1.prod.sha1.xaxis.net,tbmariadbg02sh1.prod.sha1.xaxis.net,tbmariadbg03sh1.prod.sha1.xaxis.net:3306
+  dataStoreDB: data_store
+  geoDB: agency_geo
+  user: agencyGeoUser
+  password: z5RHwvQb
+
+spring:
+  liquibase:
+    url: jdbc:mariadb://tbmariadbg01sh1.prod.sha1.xaxis.net,tbmariadbg02sh1.prod.sha1.xaxis.net,tbmariadbg03sh1.prod.sha1.xaxis.net:3306/data_store?createDatabaseIfNotExist=true
+    user: agency_geo
+    password: z5RHwvQb
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    password: z5RHwvQb
+    contexts: production
+
+app:
+    chron: "0 0 1 * * SUN"
